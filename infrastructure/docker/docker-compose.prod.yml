@@ -14,7 +14,7 @@ services:
       - JWT_SECRET=${JWT_SECRET}
       - JWT_EXPIRES_IN=7d
       - PORT=3000
-      - CORS_ORIGIN=https://santiago.me
+      - CORS_ORIGIN=https://santiagopalma.me
     depends_on:
       db:
         condition: service_healthy

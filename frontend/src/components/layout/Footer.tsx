@@ -9,7 +9,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Brand */}
           <div className="space-y-4">
-            <h3 className="text-2xl font-bold text-gradient">Santiago</h3>
+            <h3 className="text-2xl font-bold text-gradient">Santiago Palma</h3>
             <p className="text-slate-600 dark:text-slate-400 max-w-xs">
               Desarrollador Full Stack apasionado por crear experiencias web increíbles.
             </p>
@@ -95,7 +95,7 @@ export default function Footer() {
         {/* Copyright */}
         <div className="mt-12 pt-8 border-t border-slate-200 dark:border-slate-800">
           <p className="text-center text-sm text-slate-500 dark:text-slate-500">
-            © {currentYear} Santiago. Todos los derechos reservados. Hecho con ❤️ y mucho ☕
+            © {currentYear} Santiago Palma. Todos los derechos reservados. Hecho con ❤️ y mucho ☕
           </p>
         </div>
       </div>

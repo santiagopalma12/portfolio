@@ -7,8 +7,8 @@
 
 ## 🚀 Demo
 
-- **Frontend:** [https://santiago.me](https://santiago.me)
-- **API:** [https://api.santiago.me](https://api.santiago.me)
+- **Frontend:** [https://santiagopalma.me](https://santiagopalma.me)
+- **API:** [https://api.santiagopalma.me](https://api.santiagopalma.me)
 
 ## 📋 Descripción
 

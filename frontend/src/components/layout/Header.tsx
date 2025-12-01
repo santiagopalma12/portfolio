@@ -32,7 +32,7 @@ export default function Header() {
             to="/"
             className="text-xl md:text-2xl font-bold text-gradient"
           >
-            Santiago
+            Santiago Palma
           </Link>
 
           {/* Desktop Navigation */}

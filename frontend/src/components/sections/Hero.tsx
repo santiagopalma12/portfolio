@@ -61,7 +61,7 @@ export default function Hero() {
             className="mt-8 heading-1"
           >
             Hola, soy{' '}
-            <span className="text-gradient">Santiago</span>
+            <span className="text-gradient">Santiago Palma</span>
           </motion.h1>
 
           {/* Subtitle */}
