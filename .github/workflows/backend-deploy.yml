@@ -2,7 +2,7 @@ name: Deploy Backend to DigitalOcean
 
 on:
   push:
-    branches: [main]
+    branches: [master]
     paths:
       - 'backend/**'
       - 'infrastructure/**'
@@ -43,7 +43,7 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     needs: test
-    if: github.ref == 'refs/heads/main'
+    if: github.ref == 'refs/heads/master'
     
     steps:
       - name: Checkout
@@ -67,7 +67,7 @@ jobs:
             
             echo "📥 Pulling latest changes..."
             cd /home/deploy/portfolio
-            git pull origin main
+            git pull origin master
             
             echo "🐳 Building and deploying..."
             cd infrastructure/docker
