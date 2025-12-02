@@ -1,9 +1,28 @@
+import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import { Card, CardImage, CardContent } from '../ui/Card'
-import { mockProjects } from '../../services/projects'
+import { getProjects, mockProjects } from '../../services/projects'
+import type { Project } from '../../types/project'
 
 export default function Projects() {
-  const projects = mockProjects // Will be replaced with API call
+  const [projects, setProjects] = useState<Project[]>(mockProjects)
+  const [loading, setLoading] = useState(true)
+
+  useEffect(() => {
+    async function fetchProjects() {
+      try {
+        const data = await getProjects()
+        if (data && data.length > 0) {
+          setProjects(data)
+        }
+      } catch (error) {
+        console.log('Using mock projects data')
+      } finally {
+        setLoading(false)
+      }
+    }
+    fetchProjects()
+  }, [])
 
   return (
     <section id="projects" className="section-padding bg-slate-50 dark:bg-slate-800/50">

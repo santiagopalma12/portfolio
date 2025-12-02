@@ -1,4 +1,7 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://santiago.me/sitemap.xml
+Sitemap: https://santiagopalma.me/sitemap.xml
+
+# Disallow admin/api paths
+Disallow: /api/

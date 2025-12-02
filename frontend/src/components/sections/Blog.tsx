@@ -1,10 +1,29 @@
+import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import { Card, CardImage, CardContent } from '../ui/Card'
-import { mockPosts } from '../../services/blog'
+import { getPosts, mockPosts } from '../../services/blog'
 import { formatDate } from '../../utils/formatDate'
+import type { BlogPost } from '../../types/blog'
 
 export default function Blog() {
-  const posts = mockPosts // Will be replaced with API call
+  const [posts, setPosts] = useState<BlogPost[]>(mockPosts)
+  const [loading, setLoading] = useState(true)
+
+  useEffect(() => {
+    async function fetchPosts() {
+      try {
+        const data = await getPosts()
+        if (data && data.length > 0) {
+          setPosts(data)
+        }
+      } catch (error) {
+        console.log('Using mock blog data')
+      } finally {
+        setLoading(false)
+      }
+    }
+    fetchPosts()
+  }, [])
 
   return (
     <section id="blog" className="section-padding bg-white dark:bg-slate-900">

@@ -3,7 +3,7 @@ import { useForm } from 'react-hook-form'
 import { motion } from 'framer-motion'
 import Button from '../ui/Button'
 import Input, { Textarea } from '../ui/Input'
-import { sendContactMessageMock } from '../../services/contact'
+import { sendContactMessage } from '../../services/contact'
 import type { ContactForm } from '../../types/api'
 import { SOCIAL_LINKS } from '../../utils/constants'
 
@@ -23,7 +23,7 @@ export default function Contact() {
     setSubmitStatus('idle')
 
     try {
-      await sendContactMessageMock(data)
+      await sendContactMessage(data)
       setSubmitStatus('success')
       reset()
     } catch {
