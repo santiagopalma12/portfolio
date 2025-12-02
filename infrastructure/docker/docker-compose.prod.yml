@@ -44,7 +44,7 @@ services:
       - postgres_data:/var/lib/postgresql/data
       - ./backups:/backups
     healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      test: [ "CMD-SHELL", "pg_isready -U postgres" ]
       interval: 10s
       timeout: 5s
       retries: 5
@@ -100,7 +100,7 @@ services:
     container_name: portfolio-adminer
     restart: always
     ports:
-      - "127.0.0.1:8080:8080"  # Solo localhost, acceder via SSH tunnel
+      - "127.0.0.1:8080:8080" # Solo localhost, acceder via SSH tunnel
     environment:
       - ADMINER_DEFAULT_SERVER=db
     depends_on:
