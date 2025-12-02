@@ -6,7 +6,7 @@ import type { Project } from '../../types/project'
 
 export default function Projects() {
   const [projects, setProjects] = useState<Project[]>(mockProjects)
-  const [loading, setLoading] = useState(true)
+  const [isLoading, setIsLoading] = useState(true)
 
   useEffect(() => {
     async function fetchProjects() {
@@ -18,11 +18,21 @@ export default function Projects() {
       } catch (error) {
         console.log('Using mock projects data')
       } finally {
-        setLoading(false)
+        setIsLoading(false)
       }
     }
     fetchProjects()
   }, [])
+
+  if (isLoading) {
+    return (
+      <section id="projects" className="section-padding bg-slate-50 dark:bg-slate-800/50">
+        <div className="container-custom text-center">
+          <div className="animate-pulse">Cargando proyectos...</div>
+        </div>
+      </section>
+    )
+  }
 
   return (
     <section id="projects" className="section-padding bg-slate-50 dark:bg-slate-800/50">

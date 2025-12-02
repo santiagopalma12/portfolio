@@ -7,7 +7,7 @@ import type { BlogPost } from '../../types/blog'
 
 export default function Blog() {
   const [posts, setPosts] = useState<BlogPost[]>(mockPosts)
-  const [loading, setLoading] = useState(true)
+  const [isLoading, setIsLoading] = useState(true)
 
   useEffect(() => {
     async function fetchPosts() {
@@ -19,11 +19,21 @@ export default function Blog() {
       } catch (error) {
         console.log('Using mock blog data')
       } finally {
-        setLoading(false)
+        setIsLoading(false)
       }
     }
     fetchPosts()
   }, [])
+
+  if (isLoading) {
+    return (
+      <section id="blog" className="section-padding bg-white dark:bg-slate-900">
+        <div className="container-custom text-center">
+          <div className="animate-pulse">Cargando artículos...</div>
+        </div>
+      </section>
+    )
+  }
 
   return (
     <section id="blog" className="section-padding bg-white dark:bg-slate-900">
