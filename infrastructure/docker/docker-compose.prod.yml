@@ -9,6 +9,7 @@ services:
     restart: always
     environment:
       - NODE_ENV=production
+      - HOST=0.0.0.0
       - DATABASE_URL=postgresql://postgres:${DB_PASSWORD}@db:5432/portfolio
       - REDIS_URL=redis://redis:6379
       - JWT_SECRET=${JWT_SECRET}
