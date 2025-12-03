@@ -23,10 +23,12 @@ export default function Contact() {
     setSubmitStatus('idle')
 
     try {
-      await sendContactMessage(data)
+      const response = await sendContactMessage(data)
+      console.log('Contact response:', response)
       setSubmitStatus('success')
       reset()
-    } catch {
+    } catch (error) {
+      console.error('Contact error:', error)
       setSubmitStatus('error')
     } finally {
       setIsSubmitting(false)
