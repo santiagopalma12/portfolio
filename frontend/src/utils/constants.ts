@@ -13,7 +13,6 @@ export const NAV_ITEMS = [
   { name: 'Proyectos', href: '#projects' },
   { name: 'Skills', href: '#skills' },
   { name: 'Experiencia', href: '#experience' },
-  { name: 'Blog', href: '#blog' },
   { name: 'Contacto', href: '#contact' },
 ]
 

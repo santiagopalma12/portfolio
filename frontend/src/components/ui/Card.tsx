@@ -12,7 +12,7 @@ export function Card({ children, className, hover = false, glass = false }: Card
   return (
     <div
       className={cn(
-        'rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 overflow-hidden',
+        'rounded-xl border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-neutral-900 overflow-hidden',
         hover && 'card-hover cursor-pointer',
         glass && 'glass',
         className
