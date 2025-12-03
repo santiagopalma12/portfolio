@@ -19,13 +19,12 @@ export default function About() {
               <div className="absolute -bottom-4 -right-4 w-32 h-32 bg-primary-200 dark:bg-primary-800/30 rounded-lg -z-10" />
               
               {/* Image placeholder - replace with your photo */}
-              <div className="w-full h-full rounded-2xl bg-gradient-to-br from-primary-400 to-primary-600 flex items-center justify-center overflow-hidden">
-                <div className="text-white text-center p-8">
-                  <svg className="w-24 h-24 mx-auto mb-4 opacity-80" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-                  </svg>
-                  <p className="text-lg font-medium opacity-80">Tu foto aquí</p>
-                </div>
+              <div className="w-full h-full rounded-2xl bg-gradient-to-br from-slate-800 to-slate-900 flex items-center justify-center overflow-hidden">
+                <img 
+                  src="/profile.jpg" 
+                  alt="Santiago Palma" 
+                  className="w-full h-full object-cover"
+                />
               </div>
             </div>
           </motion.div>
@@ -43,28 +42,28 @@ export default function About() {
             
             <div className="mt-6 space-y-4 text-slate-600 dark:text-slate-300 text-lg">
               <p>
-                ¡Hola! Soy Santiago, un desarrollador Full Stack apasionado por crear 
-                experiencias digitales que no solo se vean bien, sino que también 
-                funcionen de manera impecable.
+                ¡Hola! Soy Santiago, estudiante de Ingeniería de Sistemas en la 
+                Universidad Nacional de San Agustín de Arequipa (UNSA), apasionado 
+                por la intersección entre AI/ML y experiencias de desarrollo innovadoras.
               </p>
               <p>
-                Mi viaje en el desarrollo comenzó hace varios años, y desde entonces 
-                he tenido la oportunidad de trabajar en una variedad de proyectos, 
-                desde startups hasta empresas establecidas.
+                Me especializo en crear soluciones que van desde sistemas de soporte 
+                clínico con machine learning (YACHAY) hasta herramientas que gamifican 
+                el workflow de desarrolladores (Keif-Gotchi CLI).
               </p>
               <p>
-                Cuando no estoy programando, me encontrarás explorando nuevas 
-                tecnologías, contribuyendo a proyectos open source, o disfrutando 
-                de un buen café mientras leo sobre las últimas tendencias en tech.
+                Cuando no estoy entrenando modelos LSTM o diseñando grafos en Neo4j, 
+                me encontrarás explorando nuevas formas de hacer el desarrollo de 
+                software más divertido y eficiente.
               </p>
             </div>
 
             {/* Quick stats */}
             <div className="mt-8 grid grid-cols-3 gap-4">
               {[
-                { value: '3+', label: 'Años de experiencia' },
-                { value: '20+', label: 'Proyectos completados' },
-                { value: '15+', label: 'Clientes satisfechos' },
+                { value: '3', label: 'Proyectos destacados' },
+                { value: 'UNSA', label: 'Universidad' },
+                { value: 'AI/ML', label: 'Especialización' },
               ].map((stat, index) => (
                 <motion.div
                   key={stat.label}

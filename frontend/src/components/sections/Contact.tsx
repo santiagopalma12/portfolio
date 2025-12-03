@@ -100,7 +100,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <div className="text-sm text-slate-500 dark:text-slate-400">LinkedIn</div>
-                  <div className="font-medium text-slate-900 dark:text-white">Santiago</div>
+                  <div className="font-medium text-slate-900 dark:text-white">Santiago Enrique Palma Apaza</div>
                 </div>
               </a>
 
@@ -118,7 +118,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <div className="text-sm text-slate-500 dark:text-slate-400">GitHub</div>
-                  <div className="font-medium text-slate-900 dark:text-white">@santiago</div>
+                  <div className="font-medium text-slate-900 dark:text-white">@santiagopalma12</div>
                 </div>
               </a>
             </div>
