@@ -4,6 +4,7 @@ import Layout from './components/layout/Layout'
 import Home from './pages/Home'
 import ProjectDetail from './pages/ProjectDetail'
 import BlogPost from './pages/BlogPost'
+import SmartChimeraBlog from './pages/SmartChimeraBlog'
 import NotFound from './pages/NotFound'
 import { useThemeStore } from './stores/themeStore'
 
@@ -23,6 +24,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/project/:slug" element={<ProjectDetail />} />
+        <Route path="/project-blog/smartchimera" element={<SmartChimeraBlog />} />
         <Route path="/blog/:slug" element={<BlogPost />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
@@ -31,3 +33,4 @@ function App() {
 }
 
 export default App
+

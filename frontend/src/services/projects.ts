@@ -55,26 +55,28 @@ export const mockProjects: Project[] = [
   },
   {
     id: '2',
-    title: 'Project Chimera',
-    slug: 'project-chimera',
-    description: 'Sistema de formación de equipos basado en grafos de conocimiento. Visualiza relaciones entre empleados, skills y proyectos usando Neo4j y algoritmos de detección de "Linchpins" (Bus Factor).',
-    content: `Project Chimera es un MVP para optimizar la formación de equipos usando grafos de conocimiento.
+    title: 'SmartChimera',
+    slug: 'smartchimera',
+    description: 'Motor de formación inteligente de equipos de desarrollo. Utiliza grafos Neo4j, algoritmos de centralidad de Brandes y optimización por Beam Search para formar equipos óptimos minimizando el Bus Factor.',
+    content: `SmartChimera es un sistema avanzado de formación de equipos que transforma el proceso subjetivo en decisiones basadas en datos y algoritmos probados.
 
 **Arquitectura:**
 - **Backend:** FastAPI + Neo4j para modelar relaciones complejas
-- **Frontend:** React + Cytoscape.js para visualización interactiva de grafos
-- **Algoritmo Guardián:** Detecta "Linchpins" (personas críticas) y genera dossiers de equipo
+- **Frontend:** React + TypeScript + Vite para visualización interactiva
+- **Algoritmos:** Brandes Betweenness Centrality + Beam Search Optimization
 
 **Características:**
-- 🔍 **Graph Explorer:** Explora relaciones entre empleados y skills
-- 👥 **Team Recommender:** Propone equipos balanceados para proyectos
-- ⚠️ **Linchpin Detection:** Identifica Bus Factor y riesgos de conocimiento
+- 🔍 **Linchpin Detection:** Detecta empleados críticos usando centralidad de intermediación
+- 👥 **Smart Team Formation:** Optimiza equipos con Beam Search
+- 🎯 **Mission Profiles:** Perfiles predefinidos (Speed, Quality, Resilient)
+- 📊 **Sistema de Scoring:** Validación multi-fuente de competencias
 
-**Stack:** Python 77.7%, JavaScript 17%, Cypher 4.1%`,
+**Stack:** Python, FastAPI, Neo4j, Cypher, React, TypeScript, Docker`,
     imageUrl: '/projects/chimera.png',
     demoUrl: '',
-    repoUrl: 'https://github.com/santiagopalma12/DreamTeam',
-    technologies: ['Python', 'FastAPI', 'Neo4j', 'Cypher', 'React', 'Cytoscape.js', 'Docker'],
+    repoUrl: 'https://github.com/santiagopalma12/SmartChimera',
+    blogSlug: 'smartchimera',
+    technologies: ['Python', 'FastAPI', 'Neo4j', 'Cypher', 'React', 'TypeScript', 'Tailwind CSS', 'Docker'],
     featured: true,
     published: true,
     order: 2,

@@ -7,6 +7,7 @@ export interface Project {
   imageUrl?: string
   demoUrl?: string
   repoUrl?: string
+  blogSlug?: string  // For projects with dedicated blog pages
   technologies: string[]
   featured: boolean
   published: boolean
